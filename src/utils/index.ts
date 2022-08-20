@@ -36,7 +36,15 @@ const supportedBlockLevelTags = [
   'tfoot',
   'tbody',
 ] as const;
-
+const supportedInlineLevelTags = [
+  'br',
+  'button',
+  'i',
+  'img',
+  'map',
+  'iframe',
+  'span',
+] as const;
 const supportedTableTags = [
   "tr",
   "th",
@@ -48,7 +56,6 @@ const supportedTextBasedTags = [
   'code',
   'dfn',
   'em',
-  'span',
   'strong',
   'sub',
   'sup',
@@ -73,17 +80,7 @@ const supportedTextBasedTags = [
   'dt',
 ] as const;
 
-const supportedInlineLevelTags = [
-  'br',
-  'button',
-  'i',
-  'img',
-  'map',
-  'tr',
-  'iframe',
-  "td",
-  ...supportedTextBasedTags,
-] as const;
+
 
 
 function checkIfNodeTypeIsAViableContainerDirective(node:NodeDirectiveObject){
@@ -148,6 +145,10 @@ function throwErrorIfANodeIsNotAViableNode(node:NodeDirectiveObject) {
 }
 
 export {
+  supportedInlineLevelTags,
+  supportedTextBasedTags,
+  supportedTableTags,
+  supportedBlockLevelTags,
   nodeDirectiveTypes,
   throwErrorIfANodeIsNotAViableNode,
   checkIfNodeTypeIsAViableContainerDirective,  

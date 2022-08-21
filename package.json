@@ -2,6 +2,7 @@
   "name": "remark-html-directives",
   "version": "1.0.0",
   "type": "module",
+  "main": "/src/index.ts",
   "scripts": {
     "dev": "jest --watch ./test",
     "test": "jest"

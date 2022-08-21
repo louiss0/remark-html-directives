@@ -59,7 +59,9 @@ As you can see these directives are meant to contain other directives or even ju
 A leaf directive can only generate tags that are by default inline tags , or
 'br', 'button', 'i', 'img', 'map', 'iframe', 'span',. that's it. The syntax is written like this
 
-```md  ::span[good]  ```
+```md  
+::span[good]  
+```
 
 The above example will render the html below.
 
@@ -74,7 +76,6 @@ The above example will render the html below.
 A text directive is a directive that is supposed to be put inside of text. It is created to give text meaning. Any html tag that is suposed to affect text in a special way is a text directive. This means that they are supposed to be written inside of anything that contains text. The syntax is like this.
 
 ```md
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 :mark[Suspendisse] id fringilla ipsum. 
 Interdum et malesuada fames ac ante ipsum primis in faucibus.

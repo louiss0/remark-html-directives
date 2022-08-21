@@ -6,6 +6,7 @@ import {
   supportedTextBasedTags,
   supportedTableTags,
   supportedBlockLevelTags,
+  throwErrorIfANodeIsNotAViableNode
 } from '../src/utils';
 
 import type { NodeDirectiveObject } from '../src/types';
@@ -230,3 +231,17 @@ describe('checkIfNodeTypeIsAViableTextDirective function checks for the right ta
   })
 
 });
+
+
+describe("error thrower throws error when a tag is not viable", ()=>{
+
+  test("an error is thrown when node is not the right one", ()=>{
+
+
+    expect(()=> throwErrorIfANodeIsNotAViableNode({
+      type: "foo",
+      name: "ggoiyrave"
+    })).toThrowError()
+  })
+
+})

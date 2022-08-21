@@ -23,11 +23,15 @@
     "unist-util-visit": "^4.1.0"
   },
   "repository": {
-    "url": "https://github.com/louiss0/remark-html-directives",
+    "url": "https://github.com/louiss0/remark-html-directives"
   },
   "author": {
-    "name": "Shelton Louis",
-    
+    "name": "Shelton Louis"
   },
-  "keywords": ["markdown", "html", "remark", "directives"]
+  "keywords": [
+    "markdown",
+    "html",
+    "remark",
+    "directives"
+  ]
 }

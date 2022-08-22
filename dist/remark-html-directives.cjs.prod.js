@@ -6,9 +6,9 @@ var unistUtilVisit = require('unist-util-visit');
 var hastscript = require('hastscript');
 
 const nodeDirectiveTypes = ['textDirective', 'leafDirective', 'containerDirective'];
-const supportedBlockLevelTags = ['address', 'article', 'aside', 'blockquote', "details", "summary", 'div', 'dl', 'figcaption', 'figure', 'footer', 'header', 'hr', 'li', 'main', 'nav', 'ol', 'p', 'pre', 'section', 'ul', 'video', 'audio', "hgroup", 'table', 'tfoot', 'tbody'];
+const supportedBlockLevelTags = ['address', 'article', 'aside', 'blockquote', "details", "summary", 'div', 'dl', 'figcaption', 'figure', 'footer', 'header', 'hr', 'li', 'main', 'nav', 'ol', 'p', 'pre', 'section', 'ul', 'video', 'audio', "hgroup", 'table', 'tfoot', 'thead', 'tbody'];
 const supportedInlineLevelTags = ['br', 'button', 'i', 'img', 'map', 'iframe', 'span'];
-const supportedTableTags = ["tr", "th", "td"];
+const supportedTableTags = ["tr", "th", "td", "col", "caption", "colgroup"];
 const supportedTextBasedTags = ['cite', 'code', 'dfn', 'em', 'strong', 'sub', 'sup', 'time', 'var', 'mark', 'q', 'small', 'kbd', 'samp', 'a', 'abbr', 'bdo', "data", "h1", "h2", "h3", "h4", "h5", "h6", 'dd', 'dt'];
 
 function checkIfNodeTypeIsAViableContainerDirective(node) {
@@ -32,10 +32,11 @@ function throwErrorIfANodeIsNotAViableNode(node) {
     A container directive must be written using these tag names 
     ${supportedBlockLevelTags.join(' , ')}${supportedTableTags.join(' , ')}.
     
-    Remenmber to use ::: a name then put ::: at the bottom for them  
+    Remember to use ::: a name then put ::: at the bottom for them  
 
     A leaf directive must use these tag names 
-    ${supportedInlineLevelTags.join(',')}${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}
+    ${supportedInlineLevelTags.join(',')}
+    ${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}
 
     Remember to use :: for them 
 

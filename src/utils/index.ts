@@ -34,6 +34,7 @@ const supportedBlockLevelTags = [
   "hgroup",
   'table',
   'tfoot',
+  'thead',
   'tbody',
 ] as const;
 const supportedInlineLevelTags = [
@@ -49,6 +50,9 @@ const supportedTableTags = [
   "tr",
   "th",
   "td",
+  "col",
+  "caption",
+  "colgroup",
 ] as const
 
 const supportedTextBasedTags = [
@@ -130,7 +134,8 @@ function throwErrorIfANodeIsNotAViableNode(node:NodeDirectiveObject) {
     Remember to use ::: a name then put ::: at the bottom for them  
 
     A leaf directive must use these tag names 
-    ${supportedInlineLevelTags.join(',')}${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}
+    ${supportedInlineLevelTags.join(',')}
+    ${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}
 
     Remember to use :: for them 
 

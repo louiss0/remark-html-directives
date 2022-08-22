@@ -1,6 +1,6 @@
 {
   "name": "remark-html-directives",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "dist/remark-html-directives.cjs.js",
   "scripts": {

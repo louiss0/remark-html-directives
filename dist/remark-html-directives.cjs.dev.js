@@ -37,11 +37,11 @@ function throwErrorIfANodeIsNotAViableNode(node) {
     A leaf directive must use these tag names 
     ${supportedInlineLevelTags.join(',')}${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}
 
-    Remenmber to use :: for them 
+    Remember to use :: for them 
 
     A text based directive must contain these tags ${supportedTextBasedTags.join(' , ')}
     
-    Remenmber to use : for them 
+    Remember to use : for them 
 
   `);
   }

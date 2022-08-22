@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1661128983814" clover="3.2.0">
-  <project timestamp="1661128983814" name="All files">
+<coverage generated="1661129496311" clover="3.2.0">
+  <project timestamp="1661129496311" name="All files">
     <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="13" methods="7" coveredmethods="7" elements="35" coveredelements="34" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="/workspace/remark-html-directives/src/utils/index.ts">
       <metrics statements="14" coveredstatements="14" conditionals="14" coveredconditionals="13" methods="7" coveredmethods="7"/>

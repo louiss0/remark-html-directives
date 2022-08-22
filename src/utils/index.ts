@@ -127,7 +127,7 @@ function throwErrorIfANodeIsNotAViableNode(node:NodeDirectiveObject) {
     A container directive must be written using these tag names 
     ${supportedBlockLevelTags.join(' , ')}${supportedTableTags.join(' , ')}.
     
-    Remenmber to use ::: a name then put ::: at the bottom for them  
+    Remember to use ::: a name then put ::: at the bottom for them  
 
     A leaf directive must use these tag names 
     ${supportedInlineLevelTags.join(',')}${supportedTextBasedTags.join(' , ')}${supportedTableTags.join(' , ')}

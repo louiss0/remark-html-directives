@@ -1,5 +1,5 @@
 import {defineConfig} from "vite"
-
+import dts from "vite-plugin-dts"
 export default defineConfig({
     build:{
         lib: {
@@ -8,5 +8,8 @@ export default defineConfig({
             fileName: "remark-html-directives"
             
         }
-    }
+    },
+    plugins:[
+        dts({insertTypesEntry:true})
+    ]
 })

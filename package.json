@@ -1,25 +1,29 @@
 {
   "name": "remark-html-directives",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
-  "main": "dist/remark-html-directives.cjs.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/remark-html-directives.umd.cjs",
+  "module": "./dist/remark-html-directives.js",
+  "exports": {
+    ".": {
+      "import": "./dist/remark-html-directives.js",
+      "require": "./dist/remark-html-directives.umd.cjs"
+    }
+  },
   "scripts": {
-    "dev": "jest --watch ./test",
-    "build": "preconstruct build",
-    "release": "preconstruct build && pnpm publish"
+    "coverage": "vitest run --coverage",
+    "dev": "vitest",
+    "build": "vite build",
+    "release": "vite build && pnpm publish"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "@babel/preset-typescript": "^7.18.6",
-    "@preconstruct/cli": "^2.2.1",
-    "@types/jest": "^28.1.7",
-    "@types/node": "^18.7.9",
-    "babel-jest": "^28.1.3",
-    "jest": "^28.1.3",
-    "ts-node": "^10.9.1",
+    "@vitest/ui": "^0.26.2",
     "typescript": "^4.6.4",
-    "vite": "^3.0.8"
+    "vite": "^3.0.9",
+    "vitest": "^0.26.2"
   },
   "dependencies": {
     "hastscript": "^7.0.2",
